@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trujillo e Hijo</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="High quality custom furniture, kitchens and other installations. 40+ of experience an customer trust in València.">
+    <meta name="keywords" content="Trujillo, Furniture, Woodwork, Carpinters ">
+    <meta name="author" content="Xeno Dane">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/review_style.css">
+
+    <!--Script to show and hide menu in mobile mode-->
+    <script src="scripts/show_menu.js"></script>
+</head>
+<body>
+<header class="col-12" id="top">
+    <h1 class="title col-12 col-max">Trujillo e Hijo Carpinters</h1>
+    <button id="button" class="menu-button col-100 hamburger--3dx" onclick="showMenu()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div id="menu" class="menu col-12">
+        <nav class="col-12 col-max">
+            <a href="index.html" class="col-auto"><div>Home</div></a>
+            <a href="gallery.html" class="col-auto"><div>Gallery</div></a>
+            <a href="review.html" class="col-auto"><div>Reviews</div></a>
+            <a href="contact.html" class="col-auto"><div>Contact Us</div></a>
+        </nav>
+    </div>
+</header>
+<main class="col-12">
+    <section class="col-12" id="page-title">
+        <h2 class="col-max">Reviews from previous customers</h2>
+    </section>
+    <section class="col-max">
+        <table id="reviewContent" class="col-10"></table>
+    </section>
+</main>
+<footer class="col-12">
+    <div class="col-12 col-max">
+        <p>Copyright © Truillo e Hijo S.L.</p>
+        <p><a href="#top" class="toTop">Go to top ↑</a></p>
+    </div>
+</footer>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+    xmlhttp.open("GET", "reviews.xml", true);
+    xmlhttp.send();
+    function myFunction(xml) {
+        var x, i, xmlDoc, table;
+        var imagesrc, title, content, author, score;
+        xmlDoc = xml.responseXML;
+        table = "<tr><td class='table-space'></td></tr>";
+        x = xmlDoc.getElementsByTagName("review");
+        for (i = 0; i < x.length; i++) {
+            imagesrc = x[i].getElementsByTagName("imagesrc")[0].childNodes[0].nodeValue;
+            title = x[i].getElementsByTagName("product")[0].childNodes[0].nodeValue;
+            content = x[i].getElementsByTagName("content")[0].childNodes[0].nodeValue;
+            author = x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue;
+            score = x[i].getAttribute("score");
+            table += "<tr><td rowspan='4' class='table-img'><img src='" +
+                imagesrc + "' alt='" + title + "'> </td><td class='table-title'>" +
+                title + "</td></tr><tr><td class='table-score'>" + score +
+                "/5</td></tr><tr><td class='table-content'>" + content +
+                "</td></tr><tr><td class='table-author'>- " + author +
+                "</td></tr><tr><td class='table-space' colspan='2'><hr></td></tr>";
+        }
+        document.getElementById("reviewContent").innerHTML = table;
+    }
+</script>
+</body>
+</html>

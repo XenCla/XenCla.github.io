@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trujillo e Hijo</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="High quality custom furniture, kitchens and other installations. 40+ of experience an customer trust in València.">
+    <meta name="keywords" content="Trujillo, Furniture, Woodwork, Carpinters ">
+    <meta name="author" content="Xeno Dane">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/contact_style.css">
+
+    <!--Script to show and hide menu in mobile mode-->
+    <script src="scripts/show_menu.js"></script>
+    <script>
+        function submitForm() {
+            const fname = document.getElementById("fname").value;
+        }
+    </script>
+</head>
+<body>
+<header class="col-12" id="top">
+    <h1 class="title col-12 col-max">Trujillo e Hijo Carpinters</h1>
+    <button id="button" class="menu-button col-100 hamburger--3dx" onclick="showMenu()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div id="menu" class="menu col-12">
+        <nav class="col-12 col-max">
+            <a href="index.html" class="col-auto"><div>Home</div></a>
+            <a href="gallery.html" class="col-auto"><div>Gallery</div></a>
+            <a href="review.html" class="col-auto"><div>Reviews</div></a>
+            <a href="contact.html" class="col-auto"><div>Contact Us</div></a>
+        </nav>
+    </div>
+</header>
+<main>
+<section class="col-12" id="page-title">
+    <h2 class="col-max">Contact Us</h2>
+</section>
+<section class="col-12" id="section-socials">
+    <h2>Follow and message us on our socials</h2>
+    <div class="col-max" id="socials-logos">
+        <a href=""><img src="./images/contact/icon-facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/monqda/"><img src="./images/contact/icon-instagram.svg" alt="Instagram"></a>
+        <a href=""><img src="./images/contact/icon-twitter.svg" alt="Twitter"></a>
+        <a href=""><img src="./images/contact/icon-whatsapp.svg" alt="Whatsapp"></a>
+    </div>
+</section>
+<section class="col-max" id="section-form">
+    <h2>Send us a message</h2>
+    <form action="" method="post" id="contact-form">
+        <div class="col-6 form-box">
+            <label for="fname">Firstname*</label><br>
+            <input type="text" name="fname" id="fname" required>
+        </div>
+        <div class="col-6 form-box">
+            <label for="lname">Lastname*</label><br>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+        <div class="col-12 form-box">
+            <p>Gender*</p>
+            <input type="radio" name="gender" id="male" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" id="female" value="Female" required>
+            <label for="female">Female</label><br>
+            <input type="radio" name="gender" id="other" value="Other" required>
+            <label for="other">Other</label><br>
+            <input type="radio" name="gender" id="perfernottosay" value="PerferNotToSay" required>
+            <label for="perfernottosay">Perfer not to say</label>
+        </div>
+        <div class="col-6 form-box">
+            <label for="datebirth">Date of birth*</label><br>
+            <input type="date" name="datebirth" id="datebirth" required>
+        </div>
+        <div class="col-6 form-box">
+            <label for="location">Country and City*</label><br>
+            <input type="text" name="location" id="location" required>
+        </div>
+        <div class="col-6 form-box">
+            <label for="email">Email*</label><br>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="col-6 form-box">
+            <label for="phone">Phone Number*</label><br>
+            <input type="tel" name="phone" id="phone" required minlength="9" maxlength="9">
+        </div>
+        <div class="col-12 form-box">
+            <label for="type">Category*</label><br>
+            <select name="type" id="type" required>
+                <option value="" selected="selected">--Please pick the category of your consultation--</option>
+                <optgroup label="Commmisions">
+                    <option value="commision">Commision - Wooden Furniture</option>
+                    <option value="commision">Commision - Upholsterd Furniture</option>
+                    <option value="commision">Commision - Display Pieces</option>
+                </optgroup>
+                <optgroup label="Intallations">
+                    <option value="install-kitchen">Installation - Kitchen</option>
+                    <option value="install-bathroom">Installation - Bathroom</option>
+                    <option value="install-shelves">Installation - Shelves and Closets</option>
+                </optgroup>
+                <optgroup label="Repair">
+                    <option value="repair-wooden">Repair - Wooden Furniture</option>
+                    <option value="repair-upholterd">Repair - Upholsterd Furniture</option>
+                    <option value="repair-installation">Repair - Installations</option>
+                    <option value="repair-other">Repair - Other</option>
+                </optgroup>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="col-12 form-box">
+            <label for="content">Describe your request:*</label><br>
+            <textarea name="content" id="content" rows="5" required></textarea>
+        </div>
+        <div class="form-box">*Required Fields</div>
+        <div class="col-12  form-box">
+            <input type="submit">
+            <input type="reset">
+        </div>
+    </form>
+</section>
+</main>
+<footer class="col-12">
+    <div class="col-12 col-max">
+        <p>Copyright © Truillo e Hijo S.L.</p>
+        <p><a href="#top" class="toTop">Go to top ↑</a></p>
+    </div>
+</footer>
+</body>
+</html>

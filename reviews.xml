@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reviews [
+    <!ELEMENT reviews (review+)>
+    <!ELEMENT review (product,author,content,imagesrc)>
+    <!ATTLIST review score (1|2|3|4|5) #REQUIRED>
+    <!ELEMENT product (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT content (#PCDATA)>
+    <!ELEMENT imagesrc (#PCDATA)>
+]>
+<reviews>
+    <review score="5">
+        <product>Wooden chairs</product>
+        <author>Gilberta Consuela Escamilla</author>
+        <content>The chairs are wonderfull.</content>
+        <imagesrc>./images/review/chair-1.jpg</imagesrc>
+    </review>
+    <review score="4">
+        <product>Bed</product>
+        <author>Maritza Amado Fonseca</author>
+        <content>I can finally sleep.</content>
+        <imagesrc>./images/review/bed-1.jpg</imagesrc>
+    </review>
+    <review score="3">
+        <product>Kitchen</product>
+        <author>Almudena Olalla Aritza</author>
+        <content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique nulla aliquet enim. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Velit scelerisque in dictum non consectetur a erat nam at. Cursus in hac habitasse platea dictumst. Arcu risus quis varius quam quisque. Lacus vel facilisis volutpat est velit. Lorem ipsum dolor sit amet consectetur. Ornare massa eget egestas purus viverra accumsan. Nunc id cursus metus aliquam eleifend mi in nulla. Hendrerit dolor magna eget est lorem ipsum. Sapien nec sagittis aliquam malesuada bibendum arcu. Viverra nam libero justo laoreet sit. Ac ut consequat semper viverra nam libero justo laoreet sit. Cras adipiscing enim eu turpis egestas pretium aenean pharetra.</content>
+        <imagesrc>./images/review/kitchen-1.jpg</imagesrc>
+    </review>
+    <review score="1">
+        <product>Bathroom</product>
+        <author>Betty Gray-Bowens</author>
+        <content>Not keen on the monochrome look.</content>
+        <imagesrc>./images/review/bathroom-3.jpg</imagesrc>
+    </review>
+</reviews>
