@@ -1,0 +1,54 @@
+/*individual image for page title*/
+#page-title {
+    background-image: url("../images/review/page-title.jpg");
+}
+
+/*table, tr, td {
+    border: 1px solid black;
+}*/
+
+#reviewContent {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-space {
+    height: 30px;
+}
+
+.table-img {
+    vertical-align: middle;
+    width: 200px;
+    padding-right: 15px;
+}
+
+.table-img img {
+    width: 100%;
+}
+
+.table-title {
+    vertical-align: top;
+    font-size: 20px;
+    height: 20px;
+}
+
+.table-score {
+    font-size: 17px;
+    height: 17px;
+}
+
+.table-content {
+    vertical-align: middle;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table-author {
+    vertical-align: bottom;
+    font-size: 15px;
+    height: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 400;
+}

@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Fin meyerweb.com reset css*/
+
+/*css standardization*/
+a {
+	text-decoration: none;
+}
+
+/*start universal styles*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/*stick footer to bottom of page*/
+header, footer {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+main {
+	flex-grow: 1;
+}
+
+/*col- classes*/
+.col-max {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*scaleable title font size for mobile*/
+.title {
+	font-size: 40px;
+}
+
+/*mobile phones*/
+[class*="col-"] {
+	width: 100%;
+}
+
+/*tablets*/
+@media only screen and (min-width: 550px) {
+	.col-t-1 {width: 8.33%;}
+	.col-t-2 {width: 16.66%;}
+	.col-t-3 {width: 25%;}
+	.col-t-4 {width: 33.33%;}
+	.col-t-5 {width: 41.66%;}
+	.col-t-6 {width: 50%;}
+	.col-t-7 {width: 58.33%;}
+	.col-t-8 {width: 66.66%;}
+	.col-t-9 {width: 75%;}
+	.col-t-10 {width: 83.33%;}
+	.col-t-11 {width: 91.66%;}
+	.col-t-12 {width: 100%;}
+	.col-t-auto {width: auto;}
+	/*scaling font size size for title*/
+	.title {
+		font-size: 60px;
+	}
+}
+
+/*desktop*/
+@media only screen and (min-width: 768px) {
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+	.col-auto {width: auto;}
+}
+
+/*menu classes*/
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background-color: #e7e7e7;
+}
+
+.title {
+    color: #000;
+	/*padding of title responsive to viewport*/
+    padding: 10vh 15px 2vh;
+    text-align: left;
+}
+ 
+.menu {
+	/*does not display on load for mobile*/
+    display: none;
+    background-color: #fff;
+    color: #853436;
+}
+
+a:active, a:hover, a:link, a:visited {
+    color: #853436;
+}
+
+.menu-button {
+	/*displays for mobile*/
+    display: block;
+    padding: 15px;
+    border: 0;
+    background-color: #bbb;
+}
+
+@media only screen and (min-width: 550px) {
+	/*display menu and hide button on tablet and pc*/
+    .menu-button {display: none;}
+    .menu {display: block;}
+}
+
+.menu a:hover{
+    background-color: #33b3cc;
+}
+
+.menu nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu div {
+    text-align: center;
+    padding: 15px;
+}
+/*fin menu styles*/
+
+/*page title*/
+#page-title {
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#page-title h2 {
+    padding: 15px;
+    color: #fff;
+    font-size: 50px;
+}
+
+/*footer*/
+footer {
+	background-color: #ddd;
+}
+footer div {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 15px;
+}
+footer p {
+	width: max-content;
+}
+.toTop {
+	text-decoration: underline;
+	color: blue;
+}

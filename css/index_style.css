@@ -1,0 +1,44 @@
+/*individual image for page title*/
+#page-title {
+    background-image: url("../images/index/page-title.jpg");
+}
+
+/*content styles*/
+article {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+article:nth-child(even) {
+    flex-direction: row;
+}
+
+article img {
+    padding: 15px;
+}
+
+article h3 {
+    padding-top: 15px;
+    font-size: 35px;
+}
+
+#article-trust ul {
+    list-style: square;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
+#article-trust li {
+    margin-top: 2px;
+}
+
+#article-ethics iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 5px;
+}
